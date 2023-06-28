@@ -2,6 +2,8 @@
 
 Project with integration tests environment.
 
+[![release-please](https://github.com/ortisan/local-dev-environment/actions/workflows/release-please.yml/badge.svg?branch=main)](https://github.com/ortisan/local-dev-environment/actions/workflows/release-please.yml)
+
 ## Starting project
 
 
