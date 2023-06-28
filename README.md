@@ -17,3 +17,16 @@ docker-compose up -d
 curl --location --request GET 'http://localhost:1080/assets/indices' \
 --header 'Content-Type: application/json'
 ```
+
+## Running Sonar
+
+```sh
+export SONARQUBE_URL=http://host.docker.internal:9000
+export SONAR_LOGIN=squ_fde11c23678cfd9c6a154e9019081b517d6fde0f
+docker run \
+--rm \
+-e SONAR_HOST_URL="http://host.docker.internal:9000" \
+-e SONAR_LOGIN="squ_fde11c23678cfd9c6a154e9019081b517d6fde0f" \
+-v "$(pwd)/golang-example:/usr/src" \
+sonarsource/sonar-scanner-cli
+```
