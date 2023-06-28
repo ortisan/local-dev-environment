@@ -1,0 +1,253 @@
+{
+  "info": {
+    "_postman_id": "e7c1630a-8f3e-492b-b88d-bdba81588626",
+    "name": "Testing-MockServer",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "With Mock - GET - Indices",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n    {\n        \"weight\": 50.0,\n        \"asset\": \"PETR4\"\n    },\n    {\n        \"weight\": 50.0,\n        \"asset\": \"ITUB4\"\n    }\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:1080/assets/indices",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1080",
+          "path": [
+            "assets",
+            "indices"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "With Mock GET - Portfolio",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n    {\n        \"weight\": 50.0,\n        \"asset\": \"PETR4\"\n    },\n    {\n        \"weight\": 50.0,\n        \"asset\": \"ITUB4\"\n    }\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:1080/assets/portfolio",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1080",
+          "path": [
+            "assets",
+            "portfolio"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "With Mock - POST - Portfolio",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n    {\n        \"weight\": 50.0,\n        \"asset\": \"PETR4\"\n    },\n    {\n        \"weight\": 50.0,\n        \"asset\": \"ITUB4\"\n    }\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:1080/assets/portfolio",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1080",
+          "path": [
+            "assets",
+            "portfolio"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "With Mock - PUT - Portfolio",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n    {\n        \"weight\": 50.0,\n        \"asset\": \"PETR4\"\n    },\n    {\n        \"weight\": 50.0,\n        \"asset\": \"ITUB4\"\n    }\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:1080/assets/portfolio",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "1080",
+          "path": [
+            "assets",
+            "portfolio"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "With Spring Boot - GET - Indices",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/broker/indices",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "broker",
+            "indices"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "With Spring Boot - Get - Portfolio",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/broker/portfolio",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "broker",
+            "portfolio"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "With Spring Boot - POST - Portfolio",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n    {\n        \"weight\": 50.0,\n        \"asset\": \"PETR4\"\n    },\n    {\n        \"weight\": 50.0,\n        \"asset\": \"ITUB4\"\n    }\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/broker/portfolio",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "broker",
+            "portfolio"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "With Spring Boot - PUT - Portfolio",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n    {\n        \"weight\": 50.0,\n        \"asset\": \"PETR4\"\n    },\n    {\n        \"weight\": 50.0,\n        \"asset\": \"ITUB4\"\n    }\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/broker/portfolio",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "broker",
+            "portfolio"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/assets/indices"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": {
+        "type": "JSON",
+        "json": {
+          "data": [
+            {
+              "id": 1,
+              "country": "United States",
+              "index_name": "Nasdaq",
+              "full_name": "Nasdaq Composite"
+            },
+            {
+              "id": 2,
+              "country": "Japan",
+              "category_name": "Topix 500 Value",
+              "full_name": "Topix 500 Value"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/assets/portfolio"
+    },
+    "httpResponseTemplate": {
+      "template": "return { statusCode: 201, body: {data:request.body.json} }",
+      "templateType": "JAVASCRIPT",
+      "delay": {
+        "timeUnit": "SECONDS",
+        "value": 1
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "PUT",
+      "path": "/assets/portfolio"
+    },
+    "httpResponseTemplate": {
+      "template": "return { statusCode: 201, body: {data:request.body.json} }",
+      "templateType": "JAVASCRIPT",
+      "delay": {
+        "timeUnit": "SECONDS",
+        "value": 1
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/assets/portfolio"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": {
+        "type": "JSON",
+        "json": {
+          "data": [
+            {
+              "weight": 50,
+              "asset": "PETR4"
+            },
+            {
+              "weight": 50,
+              "asset": "ITUB4"
+            }
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,45 @@
+version:  "3"
+services:
+
+  sonarqube:
+    image: sonarqube:latest
+    hostname: sonarqube
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+
+  localstack:
+    container_name: "localstack_main"
+    image: localstack/localstack:latest
+    environment:
+      - SERVICES=dynamodb,lambda,kinesis
+      - LAMBDA_EXECUTOR=docker_reuse
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - DEFAULT_REGION=us-east-1
+      - DEBUG=1
+      - DATA_DIR=/tmp/localstack/data
+      - PORT_WEB_UI=8080
+      - LAMBDA_DOCKER_NETWORK=demo-net
+      - KINESIS_PROVIDER=kinesalite
+    ports:
+      - "53:53"
+      - "53:53/udp"
+      - "443:443"
+      - "4566:4566"
+      - "4571:4571"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./docker/aws:/docker-entrypoint-initaws.d
+
+  mock-server:
+    image: mockserver/mockserver
+    ports:
+      - "1080:1080"
+    environment:
+      MOCKSERVER_PROPERTY_FILE: /config/mockserver.properties
+      MOCKSERVER_INITIALIZATION_JSON_PATH: /config/initializerJson.json
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./docker/mockserver:/config
+
